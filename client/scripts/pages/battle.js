@@ -2,12 +2,8 @@
     
     function createSquareInDiv( container, isWidth, num, divClass ){
         
-        var len;
-        
-        if( isWidth === true )
-            len = container.width();
-        else
-            len = container.height();
+        var width = container.width();
+        var height = container.height();
             
         
     }
