@@ -1,17 +1,44 @@
-﻿define( ["text!pages/battle.html"], function( html ){
+/*
+*/
+
+define(["../dom"], function (dom) {
+
+    // left default skills container
+    dom.createSquareInDiv(
+    	$('#battle-left'),
+    	false,
+    	5,
+    	true,
+    	null
+    );
+
+    // right personal skills container
+    dom.createSquareInDiv(
+		$('#battle-right'),
+		false,
+		5,
+		true,
+		null
+	);
+
+    // create moving space of enemy
+    dom.createSquareInDiv(
+        $('#space-enemy'),
+        true,
+        5,
+        true,
+        null
+    );
+
+    // create moving space of self part
+    dom.createSquareInDiv(
+        $('#space-self'),
+        true,
+        5,
+        true,
+        null
+    );
+
     
-    function createSquareInDiv( container, isWidth, num, divClass ){
-        
-        var width = container.width();
-        var height = container.height();
-            
-        
-    }
-    
-    $('#page-content').append( html );
-    
-    for(var i = 0; i < 5; i++){
-        var obj = $('<div>');
-        $('#battle-left').append( obj );
-    }
+
 });

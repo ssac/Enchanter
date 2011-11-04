@@ -7,11 +7,13 @@
     
     <title>Welcome to Enchanter</title>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" data-main="scripts/main.js" src="./scripts/require.js"></script>
     
-    <script data-main="scripts/main.js" src="./scripts/require.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>-->
+<!--     <script type="text/javascript" src="./scripts/jquery-1.6.2.js"></script> -->
     
-    <script src="http://requirejs.org/docs/release/0.24.0/minified/text.js"></script>
+<!--    <script src="http://requirejs.org/docs/release/0.24.0/minified/text.js"></script>-->
+<!--     <script type="text/javascript" src="./scripts/text.js"></script> -->
     
     <style type="text/css">
         
@@ -40,6 +42,26 @@
     	.notice-word{
     		font-family: arial;
     	}
+    	
+    	.page-cover-content{
+    	}
+    	
+    	.page-cover-input
+    	{
+    	    display:block;
+    	    float:left;
+    	    width:30%;
+    	    height:50%;
+    	}
+    	
+    	.page-cover-button
+    	{
+    	    display:block;
+    	    float:left;
+    	    width:30%;
+    	    height:10%;
+    	    border:1px solid black;
+    	}
         
     </style>
 
@@ -57,9 +79,65 @@
 		cursor: pointer;
 	">
     
-        <div id="page-cover"></div>
+        <div id="page-cover" style="width:100%; height:100%;">
         
-        <div id="page-content"></div>
+            <div id="page-cover-content" style="width:80%; height:80%;">
+            
+                <div id="page-cover-content-login" class="page-cover-input">
+                    <p>username:</p>
+                    <input type="text" id="page-cover-content-login-uname" />
+                    <p>password:</p>
+                    <input type="password" id="page-cover-content-login-pw" />
+                    <div id="page-cover-content-login-signup" class="page-cover-button">Sign Up</div>
+                    <div id="page-cover-content-login-submit" class="page-cover-button">Submit</div>
+                </div>
+                    
+                <div id="page-cover-content-play" class="page-cover-input">
+                    <p>nickname:</p>
+                    <input type="text" id="page-cover-content-play-uname" />
+                    <div id="page-cover-content-play-submit" class="page-cover-button">Submit</div>
+                </div>
+
+                <div id="page-cover-content-signup" class="page-cover-input">
+                    <p>username:</p>
+                    <input type="text" id="page-cover-content-signup-uname" />
+                    <p>password:</p>
+                    <input type="password" id="page-cover-content-signup-pw" />
+                    <p>player name:</p>
+                    <input type="text" id="page-cover-content-signup-pname" />
+                    <div id="page-cover-content-signup-submit" class="page-cover-button">Submit</div>
+                </div>
+                    
+            </div>
+        
+        </div>
+
+        <div id="page-prepare" style="width:inherit; height:auto; display:none">
+        
+            <div id="page-prepare-character"></div>
+
+            <div id="page-prepare-confirm"></div>
+        
+        </div>
+        
+        <div id="page-battle" style="width:100%; height:100%">
+
+            <div id="page-battle-left" style="width:15%; height:100%; float:left;"></div>
+
+            <div id="page-battle-middle" style="width:70%; height:100%; float: left;">
+
+		        <div id="page-battle-middle-space-enemy" style="width:100%; height:20%"></div>
+		
+		        <div id="page-battle-middle-field" style="width:100%; height:60%"></div>
+		
+		        <div id="page-battle-middle-space-self" style="width:100%; height:20%"></div>
+	
+            </div>
+
+            <div id="page-battle-right" style="width:15%; height:100%; float:left;">
+            </div>
+        
+        </div>
     
     </div>
 
